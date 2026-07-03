@@ -160,7 +160,7 @@ fun RetoScreen() {
     }
 
     // UI Structure
-    Box(modifier = Modifier.fillMaxSize().background(Color(0xFF6200EA))) { // Fondo Morado Oscuro
+    Column(modifier = Modifier.fillMaxSize().background(Color(0xFF6200EA))) { // Fondo Morado Oscuro
         // Encabezado
         Column(
             modifier = Modifier
@@ -180,11 +180,13 @@ fun RetoScreen() {
             )
         }
 
+        Spacer(modifier = Modifier.height(24.dp))
+
         // Sábana / Cortina de contenido
         Card(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(top = 140.dp),
+                .weight(1f),
             shape = RoundedCornerShape(topStart = 32.dp, topEnd = 32.dp),
             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.background),
             elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
